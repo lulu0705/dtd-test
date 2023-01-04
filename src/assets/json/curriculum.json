@@ -1,0 +1,74 @@
+[
+    {
+        "id":0,
+        "grouptitle":"大學部",
+        "listtitle": "110學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":1,
+        "grouptitle":"大學部",
+        "listtitle": "110學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":2,
+        "grouptitle":"大學部",
+        "listtitle": "111學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":3,
+        "grouptitle":"大學部",
+        "listtitle": "111學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":4,
+        "grouptitle":"碩士班",
+        "listtitle": "110學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":5,
+        "grouptitle":"碩士班",
+        "listtitle": "110學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":6,
+        "grouptitle":"碩士班",
+        "listtitle": "111學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":7,
+        "grouptitle":"碩士班",
+        "listtitle": "111學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":8,
+        "grouptitle":"在職碩士班",
+        "listtitle": "110學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":9,
+        "grouptitle":"在職碩士班",
+        "listtitle": "110學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":10,
+        "grouptitle":"在職碩士班",
+        "listtitle": "111學年度上學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    },
+    {
+        "id":11,
+        "grouptitle":"在職碩士班",
+        "listtitle": "111學年度下學期",
+        "pdfUrl": "https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview"
+    }
+]
