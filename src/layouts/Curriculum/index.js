@@ -14,7 +14,7 @@ const Curriculum = () => {
     <Fragment>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>修課與未來發展-國立臺北教育大學</title>
+        <title>各年級課表-國立臺北教育大學</title>
         <meta name="description" content="數位科技設計學系的未來發展" />
       </Helmet>
       <div className={styles.container}>
