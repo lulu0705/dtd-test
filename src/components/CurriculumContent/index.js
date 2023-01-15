@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './styles.module.scss';
-// import Curriculum from '../../assets/json/curriculum.json';
+import Curriculum from '../../assets/json/curriculum.json';
 
 import { Link } from 'react-router-dom';
 // import Dropdown from 'react-bootstrap/Dropdown';
@@ -14,6 +14,8 @@ const CurriculumContent = () => {
   const [collegeopen, setCollegeopen] = useState(false);
   const [mastergeopen, setMasteropen] = useState(false);
   const [inservicegeopen, setInserviceopen] = useState(false);
+
+  const [pdfurl, setPdfurl] = useState(0);
 
   // const handleCollegeopen = () => {
   //   setCollegeopen(!collegeopen);
@@ -29,17 +31,23 @@ const CurriculumContent = () => {
 
   return (
     <div className={styles.container}>
-
       {/* 電腦與平板左邊欄 */}
+      
       <div className={styles.titleFrame}>
+        
           <div className={styles.titleBar}>大學部</div>
+          
           <div className={styles.docsBar}>
-            <div className={styles.docsBar_docsBox}>
-                <Link className={styles.docsBar_docsBox__remarks}>
-                110學年度上學期
+          {Curriculum.map((group) =>
+            group.grouptitle === '大學部' && (
+            <div key={group.id} className={styles.docsBar_docsBox}>
+                <Link className={styles.docsBar_docsBox__remarks} onClick={() => setPdfurl(group.id)}>
+                {group.listtitle}{group.id}
                 </Link>
             </div>
-            <div className={styles.docsBar_docsBox}>
+             )
+          )}
+            {/* <div className={styles.docsBar_docsBox}>
               <Link className={styles.docsBar_docsBox__remarks}>
                 110學年度下學期
               </Link>
@@ -53,17 +61,24 @@ const CurriculumContent = () => {
               <Link className={styles.docsBar_docsBox__remarks}>
                 111學年度下學期
               </Link>
-            </div>
+            </div> */}
           </div>
-      
+
+
+          
           <div className={styles.titleBar}>碩士班</div>
           <div className={styles.docsBar}>
-            <div className={styles.docsBar_docsBox}>
+          {Curriculum.map((group) =>
+            group.grouptitle === '碩士班' && (
+            <div key={group.id} className={styles.docsBar_docsBox}>
                 <Link className={styles.docsBar_docsBox__remarks}>
-                110學年度上學期
+                {group.listtitle}{group.id}
                 </Link>
             </div>
-            <div className={styles.docsBar_docsBox}>
+              )
+            )}
+
+            {/* <div className={styles.docsBar_docsBox}>
               <Link className={styles.docsBar_docsBox__remarks}>
                 110學年度下學期
               </Link>
@@ -77,18 +92,23 @@ const CurriculumContent = () => {
               <Link className={styles.docsBar_docsBox__remarks}>
                 111學年度下學期
               </Link>
-            </div>
+            </div> */}
 
         </div>
 
           <div className={styles.titleBar}>在職碩士班</div>
           <div className={styles.docsBar}>
-            <div className={styles.docsBar_docsBox}>
+          {Curriculum.map((group) =>
+            group.grouptitle === '在職碩士班' && (
+            <div key={group.id} className={styles.docsBar_docsBox}>
                 <Link className={styles.docsBar_docsBox__remarks}>
-                110學年度上學期
+                {group.listtitle}{group.id}
                 </Link>
             </div>
-            <div className={styles.docsBar_docsBox}>
+            )
+          )}
+
+            {/* <div className={styles.docsBar_docsBox}>
               <Link className={styles.docsBar_docsBox__remarks}>
                 110學年度下學期
               </Link>
@@ -102,9 +122,10 @@ const CurriculumContent = () => {
               <Link className={styles.docsBar_docsBox__remarks}>
                 111學年度下學期
               </Link>
-            </div>
+            </div> */}
           </div>
       </div>
+      
 
       {/* 手機 Dropdowns onClick={handleCollegeopen} */}
       {/* onClick={() => { setLikeopen(false); setCommentopen(!commentopen);}} */}
@@ -125,12 +146,17 @@ const CurriculumContent = () => {
           {collegeopen ? (
                     <div className={styles.dropdown_item}>
                     <div className={styles.docsBar}>
-                    <div className={styles.docsBar_docsBox}>
-                      <Link className={styles.docsBar_docsBox__remarks}>
-                        110學年度上學期
-                      </Link>
-                    </div>
-                    <div className={styles.docsBar_docsBox}>
+                    {Curriculum.map((group) =>
+                      group.grouptitle === '大學部' && (
+                      <div key={group.id} className={styles.docsBar_docsBox}>
+                          <Link className={styles.docsBar_docsBox__remarks}>
+                          {group.listtitle}{group.id}
+                          </Link>
+                      </div>
+                      )
+                    )}
+
+                    {/* <div className={styles.docsBar_docsBox}>
                       <Link className={styles.docsBar_docsBox__remarks}>
                         110學年度下學期
                       </Link>
@@ -144,7 +170,7 @@ const CurriculumContent = () => {
                       <Link className={styles.docsBar_docsBox__remarks}>
                         111學年度下學期
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   </div>
           ) : null}
@@ -166,12 +192,17 @@ const CurriculumContent = () => {
           {mastergeopen ? (
                     <div className={styles.dropdown_item}>
                     <div className={styles.docsBar}>
-                    <div className={styles.docsBar_docsBox}>
-                      <Link className={styles.docsBar_docsBox__remarks}>
-                        110學年度上學期
-                      </Link>
-                    </div>
-                    <div className={styles.docsBar_docsBox}>
+                    {Curriculum.map((group) =>
+                      group.grouptitle === '碩士班' && (
+                      <div key={group.id} className={styles.docsBar_docsBox}>
+                          <Link className={styles.docsBar_docsBox__remarks}>
+                          {group.listtitle}{group.id}
+                          </Link>
+                      </div>
+                      )
+                    )}
+
+                    {/* <div className={styles.docsBar_docsBox}>
                       <Link className={styles.docsBar_docsBox__remarks}>
                         110學年度下學期
                       </Link>
@@ -185,7 +216,7 @@ const CurriculumContent = () => {
                       <Link className={styles.docsBar_docsBox__remarks}>
                         111學年度下學期
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   </div>
           ) : null}
@@ -207,12 +238,17 @@ const CurriculumContent = () => {
           {inservicegeopen ? (
                     <div className={styles.dropdown_item}>
                     <div className={styles.docsBar}>
-                    <div className={styles.docsBar_docsBox}>
-                      <Link className={styles.docsBar_docsBox__remarks}>
-                        110學年度上學期
-                      </Link>
-                    </div>
-                    <div className={styles.docsBar_docsBox}>
+                    {Curriculum.map((group) =>
+                      group.grouptitle === '在職碩士班' && (
+                      <div key={group.id} className={styles.docsBar_docsBox}>
+                          <Link className={styles.docsBar_docsBox__remarks}>
+                          {group.listtitle}{group.id}
+                          </Link>
+                      </div>
+                      )
+                    )}
+
+                    {/* <div className={styles.docsBar_docsBox}>
                       <Link className={styles.docsBar_docsBox__remarks}>
                         110學年度下學期
                       </Link>
@@ -226,7 +262,7 @@ const CurriculumContent = () => {
                       <Link className={styles.docsBar_docsBox__remarks}>
                         111學年度下學期
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   </div>
           ) : null}
@@ -236,8 +272,16 @@ const CurriculumContent = () => {
 
       {/* 課表連結 */}
       <div className={styles.fileFrame}>
-        <iframe className={styles.iframe} loading="lazy" title="curriculum" src="https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview" allow="autoplay"></iframe>
+      {Curriculum.map((group) =>
+            group.id === pdfurl && (
+              <iframe className={styles.iframe} loading="lazy" title="curriculum" src={group.pdfUrl} allow="autoplay"></iframe>
+              )
+            )}
+
+        {/* <iframe className={styles.iframe} loading="lazy" title="curriculum" src="https://drive.google.com/file/d/1gTeC0o3JOjBxSO1cE1KClD9zoL3x56X6/preview" allow="autoplay"></iframe> */}
       </div>
+
+
     </div>
 
     
